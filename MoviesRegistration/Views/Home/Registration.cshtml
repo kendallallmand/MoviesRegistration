@@ -3,16 +3,29 @@
 
 @model MoviesRegistration.Models.Movie
 
+
 <form action="Result" method="post">
 
     <p>ID</p>
     <input type="text" name="ID" />
     <p>Title</p>
-    <input type="text" name="Title" />
-    <p>Genre</p>
-    <input type="text" name="Genre" />
+    <input type="text" name="Title" maxlength="50" />
+    <label for="genres">Choose a Genre:</label>
+    <select name="genres" id="genres">
+        <option value="Horror">Horror</option>
+        <option value="Comedy">Comedy</option>
+        <option value="Drama">Drama</option>
+        <option value="Action">Action</option>
+    </select>
+
+
+    @model MoviesRegistration.Controllers.HomeController
+    @{
+        DateTime d = HomeController.GetDateTime();
+    }
+
     <p>Year</p>
-    <input type="number" name="Year" />
+    <input type="date" id="datemin" id="datemax" name="date" min="1880-01-01" max=d />
     <p>Actors</p>
     <input type="text" name="Actors" />
     <p>Directors</p>
