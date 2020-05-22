@@ -8,18 +8,21 @@
 
     <p>ID</p>
     <input type="text" name="ID" />
+    <h1></h1>
     <p>Title</p>
     <input type="text" name="Title" maxlength="50" />
-    </br>
-    </br>
+    
+    <p><h1></h1></p>
+  
     <label for="genres">Choose a Genre:</label>
+    <p></p>
     <select name="Genre">
         <option value="Horror">Horror</option>
         <option value="Comedy">Comedy</option>
         <option value="Drama">Drama</option>
         <option value="Action">Action</option>
     </select>
-
+    <p></p>
 
     @*@model MoviesRegistration.Controllers.HomeController
     @{
@@ -28,6 +31,7 @@
 
     <p>Year</p>
     <input type="date" name="Year" min="1880-01-01" max=d />
+    <h1></h1>
     <p>Actors</p>
     <input type="text" name="Actors" />
     <p>Directors</p>
