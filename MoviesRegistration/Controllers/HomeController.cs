@@ -23,7 +23,14 @@ namespace MoviesRegistration.Controllers
             return View();
         }
 
-        public IActionResult Registration()
+        public static DateTime GetDateTime()
+        {
+            DateTime currentDateTime =  DateTime.Now;
+            return currentDateTime;
+        }
+    
+
+    public IActionResult Registration()
         {
             return View();
         }
