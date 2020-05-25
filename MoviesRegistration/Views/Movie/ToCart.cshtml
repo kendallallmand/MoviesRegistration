@@ -34,8 +34,9 @@
     @{double total = 0;}
     @foreach (RentMovie Movies in Model)
     {
-        total = Movies.Qty * Movies.RentalCost + total;
+        total = 1 * Movies.RentalCost + total;
     }
+
     <td>@total</td>
 </tr>
 
