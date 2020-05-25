@@ -50,8 +50,8 @@ namespace MoviesRegistration.Controllers
             {
                 //object reference not set to an instance of an object
                 shoppingCart.Add(movie);
-                shoppingCart = GetSession(key, type);
                 SetSession(key, shoppingCart, type);
+                shoppingCart = GetSession(key, type);
             }
             else
             {
