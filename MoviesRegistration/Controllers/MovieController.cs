@@ -52,6 +52,17 @@ namespace MoviesRegistration.Controllers
 
 
 
+        public IActionResult Checkout()
+        {
+
+            return RedirectToAction("Checkout");
+        }
+        public IActionResult ToCheckout()
+        {
+            shoppingCart = GetSession(shoppingCartKey, "shopping");
+
+            return View(shoppingCart);
+        }
 
 
 
@@ -104,5 +115,7 @@ namespace MoviesRegistration.Controllers
             }
         }
 
-    }
+       
+
+     }
 }
