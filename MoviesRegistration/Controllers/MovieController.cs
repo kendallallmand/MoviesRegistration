@@ -39,7 +39,7 @@ namespace MoviesRegistration.Controllers
         {
             AddMovieToSession(shoppingCartKey, movie, "shopping");
 
-            return RedirectToAction("ToCart");
+            return RedirectToAction("");
         }
 
 
