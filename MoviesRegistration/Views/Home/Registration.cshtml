@@ -4,7 +4,7 @@
 @model MoviesRegistration.Models.Movie
 
 
-<form action="Result" method="post">
+<form method="post" asp-controller="Home" asp-action="Result">
 
     <p>ID</p>
     <input type="text" name="ID" />
@@ -24,13 +24,9 @@
     </select>
     <p></p>
 
-    @*@model MoviesRegistration.Controllers.HomeController
-    @{
-        DateTime d = HomeController.GetDateTime();
-    }*@
 
     <p>Year</p>
-    <input type="date" name="Year" min="1880-01-01" max=d />
+    <input type="date" name="releaseYear" min="1880-01-01" max="@DateTime.Now.ToString("yyyy-MM-dd")" />
     <h1></h1>
     <p>Actors</p>
     <input type="text" name="Actors" />

@@ -11,6 +11,9 @@ namespace MoviesRegistration.Controllers
 {
     public class HomeController : Controller
     {
+
+     
+
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -30,9 +33,24 @@ namespace MoviesRegistration.Controllers
         }
     
 
-    public IActionResult Registration()
+    public IActionResult Registration(Movie movie)
         {
-            return View();
+            return View(movie);
+        }
+
+        public IActionResult Result(int ID, string Title, string Genre, int Year, string Actors, string Directors)
+        {
+            Movie movie = new Movie(ID, Title, Genre, Year, Actors, Directors);
+
+            if (ModelState.IsValid)
+            {
+                return View(movie);
+            }
+            else
+            {
+                return RedirectToAction("Registration", movie);
+            }
+
         }
 
         public IActionResult Result(Movie a)

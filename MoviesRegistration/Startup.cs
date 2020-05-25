@@ -13,6 +13,8 @@ namespace MoviesRegistration
 {
     public class Startup
     {
+
+         
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,7 +25,15 @@ namespace MoviesRegistration
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(); services.AddControllersWithViews();
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(5);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            }
+            );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +49,8 @@ namespace MoviesRegistration
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseSession();
+           
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -50,7 +62,7 @@ namespace MoviesRegistration
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Movie}/{action=ShowTable}/{id?}");
             });
         }
     }
