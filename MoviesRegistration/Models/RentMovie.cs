@@ -9,7 +9,7 @@ namespace MoviesRegistration.Models
     {
 
         public int ID { get; set; }
-        public int Qty { get; set; }
+        public double Qty { get; set; }
         public string Title { get; set; }
         public string Genre { get; set; }
         public int Year { get; set; }
@@ -22,7 +22,7 @@ namespace MoviesRegistration.Models
 
         }
 
-        public RentMovie(int Id, int Qty, string Title, string Genre, int Year, int RunTime, double RentalCost)
+        public RentMovie(int Id, double Qty, string Title, string Genre, int Year, int RunTime, double RentalCost)
         {
             this.ID = Id;
             this.Qty = Qty;

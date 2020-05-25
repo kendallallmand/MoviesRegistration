@@ -110,5 +110,4 @@ C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\bin\Debug\netc
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.csproj.CoreCompileInputs.cache
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\ShowTable.cshtml.g.cs
-C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.csprojAssemblyReference.cache
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\ToCart.cshtml.g.cs

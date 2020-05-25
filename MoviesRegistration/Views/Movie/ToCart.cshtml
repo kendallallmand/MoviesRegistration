@@ -29,6 +29,14 @@
 
     }
 
-
+<tr>
+    <th>Total</th>
+    @{double total = 0;}
+    @foreach (RentMovie Movies in Model)
+    {
+        total = Movies.Qty * Movies.RentalCost + total;
+    }
+    <td>@total</td>
+</tr>
 
 </table>
