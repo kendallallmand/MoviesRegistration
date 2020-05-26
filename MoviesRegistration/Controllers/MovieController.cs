@@ -65,10 +65,12 @@ namespace MoviesRegistration.Controllers
         {
           
             CheckedCart = GetSession(shoppingCartKey, "shopping");
-            //Attempt to clear cart and set new list for receipt. clears all data...
-               // shoppingCart = GetSession(shoppingCartKey, "clear");
+            SetSession(shoppingCartKey, CheckedCart, "shopping");
+          
+            shoppingCart = GetSession(shoppingCartKey, "clear");
+            SetSession(shoppingCartKey, shoppingCart, "shopping");
 
-                 return View(CheckedCart);
+            return View(CheckedCart);
             
         }
 
