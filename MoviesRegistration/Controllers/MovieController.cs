@@ -24,6 +24,7 @@ namespace MoviesRegistration.Controllers
         };
 
         public List<RentMovie> shoppingCart = new List<RentMovie>();
+      
 
         public IActionResult Index()
         {
@@ -34,6 +35,7 @@ namespace MoviesRegistration.Controllers
         {
             return View(Movies);
         }
+
 
         public IActionResult AddToCart(RentMovie movie)
         {
@@ -46,25 +48,33 @@ namespace MoviesRegistration.Controllers
         public IActionResult ToCart()
         {
             shoppingCart = GetSession(shoppingCartKey, "shopping");
-
             return View(shoppingCart);
         }
-
 
 
         public IActionResult Checkout()
         {
-
-            return RedirectToAction("Checkout");
+           
+                shoppingCart = GetSession(shoppingCartKey, "shopping");
+               
+                return View(shoppingCart);
+            
         }
+
         public IActionResult ToCheckout()
         {
-            shoppingCart = GetSession(shoppingCartKey, "shopping");
-
-            return View(shoppingCart);
+          
+            return RedirectToAction("Checkout");
         }
 
 
+        public IActionResult Clear()
+        {
+            
+            shoppingCart = GetSession(shoppingCartKey, "clear");
+            return View(shoppingCart);
+
+        }
 
         public List<RentMovie> GetSession(string key, string type)
         {
@@ -81,6 +91,12 @@ namespace MoviesRegistration.Controllers
                 else if (type == "shopping")
                 {
                     shoppingCart = JsonSerializer.Deserialize<List<RentMovie>>(jsonData);
+                    return shoppingCart;
+                }
+                else if (type == "clear")
+                {
+                    shoppingCart.Clear();
+                    shoppingCart = new List<RentMovie>();
                     return shoppingCart;
                 }
             }

@@ -8,6 +8,8 @@ namespace MoviesRegistration.Models
     public class RentMovie
     {
 
+
+
         public int ID { get; set; }
         public double Qty { get; set; }
         public string Title { get; set; }
