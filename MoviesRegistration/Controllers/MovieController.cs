@@ -24,7 +24,8 @@ namespace MoviesRegistration.Controllers
         };
 
         public List<RentMovie> shoppingCart = new List<RentMovie>();
-       public bool paid = false;
+        public List<RentMovie> CheckedCart = new List<RentMovie>();
+
 
 
         public IActionResult Index()
@@ -39,11 +40,7 @@ namespace MoviesRegistration.Controllers
             return View(Movies);
         }
 
-        public bool Paying()
-        {
-            paid = true;
-            return paid;
-        }
+       
 
         public IActionResult AddToCart(RentMovie movie)
         {
@@ -66,27 +63,27 @@ namespace MoviesRegistration.Controllers
 
         public IActionResult Checkout()
         {
-           
-                shoppingCart = GetSession(shoppingCartKey, "shopping");
-              
-           
-                return View(shoppingCart);
+          
+            CheckedCart = GetSession(shoppingCartKey, "shopping");
+            //Attempt to clear cart and set new list for receipt. clears all data...
+               // shoppingCart = GetSession(shoppingCartKey, "clear");
+
+                 return View(CheckedCart);
             
         }
 
         public IActionResult ToCheckout()
         {
-          
+           
+                CheckedCart = GetSession(shoppingCartKey, "shopping");
+                
+
+
             return RedirectToAction("Checkout");
         }
 
        
 
-        public void Clear()
-        {
-            shoppingCart = GetSession(shoppingCartKey, "clear");
-
-        }
 
         public List<RentMovie> GetSession(string key, string type)
         {
@@ -109,8 +106,6 @@ namespace MoviesRegistration.Controllers
                 {
                     shoppingCart.Clear();
                     shoppingCart = new List<RentMovie>();
-                  
-                    
                     return shoppingCart;
                 }
             }
