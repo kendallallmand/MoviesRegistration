@@ -1,9 +1,7 @@
 ﻿@model List<RentMovie>
 
 
-@{
-    ViewData["Title"] = "Checkout";
-}
+
 
 <h1>Receipt</h1>
 
@@ -50,17 +48,15 @@
 
 
 
-
-
 <p onload="clearcart">
     <script clearcart>
-     @*@{
-         List<RentMovie> Cart = new List<RentMovie>();
 
-         Cart = MoviesRegistration.Controllers.MovieController.Clear();
+      
+        @*@MoviesRegistration.Controllers.MovieController.Clear();*@
+      
 
-     }*@
+
     </script>
-</p>
 
+</p>
 

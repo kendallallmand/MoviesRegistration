@@ -15,27 +15,35 @@ namespace MoviesRegistration.Controllers
 
         public List<RentMovie> Movies = new List<RentMovie>()
         {
-            new RentMovie(0, 1,"Dude Wheres My Car?", "Comedy", 2000, 120, 6.99),
-            new RentMovie(1, 1,"Dude Wheres My Mom?", "Comedy", 2000, 120, 6.99),
-            new RentMovie(2, 1,"Dude Wheres My Girlfriend?", "Comedy", 2000, 120, 6.99),
-            new RentMovie(3, 1,"Dude Wheres My Dog?", "Comedy", 2000, 120, 6.99),
-            new RentMovie(4, 1,"Dude Wheres My House?", "Comedy", 2000, 120, 6.99),
-            new RentMovie(5, 1,"Dude Wheres My Clothes?", "Comedy", 2000, 120, 6.99)
+            new RentMovie(0, 1,"Matrix", "Comedy", 2000, 120, 6.99),
+            new RentMovie(1, 1,"Holes", "Comedy", 2000, 120, 6.99),
+            new RentMovie(2, 1,"iRobot", "Comedy", 2000, 120, 6.99),
+            new RentMovie(3, 1,"Shrek", "Comedy", 2000, 120, 6.99),
+            new RentMovie(4, 1,"Shrek2", "Comedy", 2000, 120, 6.99),
+            new RentMovie(5, 1,"Shrek3", "Comedy", 2000, 120, 6.99)
         };
 
         public List<RentMovie> shoppingCart = new List<RentMovie>();
-      
+       public bool paid = false;
+
 
         public IActionResult Index()
         {
+          
             return View();
         }
 
         public IActionResult ShowTable()
         {
+         
             return View(Movies);
         }
 
+        public bool Paying()
+        {
+            paid = true;
+            return paid;
+        }
 
         public IActionResult AddToCart(RentMovie movie)
         {
@@ -47,7 +55,11 @@ namespace MoviesRegistration.Controllers
 
         public IActionResult ToCart()
         {
-            shoppingCart = GetSession(shoppingCartKey, "shopping");
+          
+                shoppingCart = GetSession(shoppingCartKey, "shopping");
+          
+               
+            
             return View(shoppingCart);
         }
 
@@ -56,7 +68,8 @@ namespace MoviesRegistration.Controllers
         {
            
                 shoppingCart = GetSession(shoppingCartKey, "shopping");
-               
+              
+           
                 return View(shoppingCart);
             
         }
@@ -67,12 +80,11 @@ namespace MoviesRegistration.Controllers
             return RedirectToAction("Checkout");
         }
 
+       
 
-        public IActionResult Clear()
+        public void Clear()
         {
-            
             shoppingCart = GetSession(shoppingCartKey, "clear");
-            return View(shoppingCart);
 
         }
 
@@ -97,6 +109,8 @@ namespace MoviesRegistration.Controllers
                 {
                     shoppingCart.Clear();
                     shoppingCart = new List<RentMovie>();
+                  
+                    
                     return shoppingCart;
                 }
             }
