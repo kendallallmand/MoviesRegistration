@@ -15,9 +15,9 @@ namespace MoviesRegistration.Controllers
 
         public List<RentMovie> Movies = new List<RentMovie>()
         {
-            new RentMovie(0, 1,"Matrix", "Comedy", 2000, 120, 6.99),
-            new RentMovie(1, 1,"Holes", "Comedy", 2000, 120, 6.99),
-            new RentMovie(2, 1,"iRobot", "Comedy", 2000, 120, 6.99),
+            new RentMovie(0, 1,"Matrix", "Action", 2000, 120, 6.99),
+            new RentMovie(1, 1,"Holes", "Drama", 2000, 120, 6.99),
+            new RentMovie(2, 1,"iRobot", "Action", 2000, 120, 6.99),
             new RentMovie(3, 1,"Shrek", "Comedy", 2000, 120, 6.99),
             new RentMovie(4, 1,"Shrek2", "Comedy", 2000, 120, 6.99),
             new RentMovie(5, 1,"Shrek3", "Comedy", 2000, 120, 6.99)

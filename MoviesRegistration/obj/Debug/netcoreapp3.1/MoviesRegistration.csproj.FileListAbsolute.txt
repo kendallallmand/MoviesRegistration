@@ -116,3 +116,4 @@ C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netc
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Registration1.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registration.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddMovie.cshtml.g.cs
+C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.csprojAssemblyReference.cache
