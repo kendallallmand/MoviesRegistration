@@ -26,7 +26,26 @@ namespace MoviesRegistration.Controllers
         public List<RentMovie> shoppingCart = new List<RentMovie>();
         public List<RentMovie> CheckedCart = new List<RentMovie>();
 
+     
+        public IActionResult Result(int ID, double Qty, string Title, string Genre, int Year, int RunTime, double RentalCost)
+        {
+            RentMovie movie = new RentMovie(ID, Qty, Title, Genre, Year, RunTime, RentalCost);
 
+            if (ModelState.IsValid)
+            {
+                return View(movie);
+            }
+            else
+            {
+                return RedirectToAction("Registration", movie);
+            }
+
+        }
+
+        public IActionResult Result(RentMovie a)
+        {
+            return View(a);
+        }
 
         public IActionResult Index()
         {

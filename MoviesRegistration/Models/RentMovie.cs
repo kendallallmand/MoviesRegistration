@@ -21,7 +21,7 @@ namespace MoviesRegistration.Models
 
         public RentMovie()
         {
-
+            RentalCost = 6.99;
         }
 
         public RentMovie(int Id, double Qty, string Title, string Genre, int Year, int RunTime, double RentalCost)

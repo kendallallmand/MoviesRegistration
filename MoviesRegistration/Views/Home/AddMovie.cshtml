@@ -1,20 +1,17 @@
 ﻿
 @{
-    ViewData["Title"] = "Registration";
-    Layout = "~/Views/Home/Registration.cshtml";
+    ViewData["Title"] = "AddMovie";
+    Layout = "~/Views/Home/AddMovie.cshtml";
 }
 
-
-
-<p>Movie Registration Form </p>
-
+<h1>AddMovie</h1>
 @model RentMovie
 
 
 <form method="post" asp-controller="" asp-action="Result">
 
     <p>ID</p>
-        <input type="text" name="ID" />
+    <input type="text" name="ID" />
     <h1></h1>
     <p>Qty</p>
     <input type="text" name="Qty" />
@@ -36,13 +33,13 @@
 
 
     <p>Year</p>
-<input type="date" name="releaseYear" min="1880-01-01" max="@DateTime.Now.ToString("yyyy-MM-dd")" />
-<input type="text" name="Year" />
-        <h1></h1>
-        <p>Runtime</p>
-        <input type="text" name="Runtime" />
+    <input type="date" name="releaseYear" min="1880-01-01" max="@DateTime.Now.ToString("yyyy-MM-dd")" />
+    <input type="text" name="Year" />
+    <h1></h1>
+    <p>Runtime</p>
+    <input type="text" name="Runtime" />
 
 
-        <input type="submit" />
+    <input type="submit" />
 
-    </form>
+</form>

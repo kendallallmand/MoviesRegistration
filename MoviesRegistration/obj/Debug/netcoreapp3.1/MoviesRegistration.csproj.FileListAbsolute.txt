@@ -18,7 +18,6 @@ C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netc
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.RazorCoreGenerate.cache
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registration.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
@@ -33,7 +32,6 @@ C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netc
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.pdb
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.genruntimeconfig.cache
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.csproj.CopyComplete
-C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Result.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -112,4 +110,9 @@ C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netc
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\ShowTable.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\ToCart.cshtml.g.cs
 C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Checkout.cshtml.g.cs
-C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\MoviesRegistration.csprojAssemblyReference.cache
+C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Result.cshtml.g.cs
+C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Registration2.cshtml.g.cs
+C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Result2.cshtml.g.cs
+C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Movie\Registration1.cshtml.g.cs
+C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\Registration.cshtml.g.cs
+C:\Users\kenda\source\repos\MoviesRegistration\MoviesRegistration\obj\Debug\netcoreapp3.1\Razor\Views\Home\AddMovie.cshtml.g.cs
